@@ -4,7 +4,7 @@ class Author:
     def __init__(self, name):
         self.name = name
         self.ndoc = 0
-        self.production = {}
+        self.production = {}   # dictionnaire doc_id → Document
 
     def add(self, doc):
         self.production[self.ndoc] = doc
