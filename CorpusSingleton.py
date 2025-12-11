@@ -1,0 +1,11 @@
+from Corpus import Corpus
+
+class CorpusSingleton(Corpus):
+    _instance = None
+
+    def __new__(cls, nom):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            # initialiser seulement si nouvelle instance
+            cls._instance.__init__(nom)
+        return cls._instance
